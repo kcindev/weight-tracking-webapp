@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --bg: #07111f;
+  --bg-elevated: rgba(10, 18, 34, 0.78);
+  --bg-soft: rgba(255, 255, 255, 0.05);
+  --panel: #0b1629;
+  --panel-strong: #101d35;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --text: #f4f8ff;
+  --muted: #96a5c2;
+  --accent: #52d8ff;
+  --accent-strong: #2ba8f7;
+  --success: #34d399;
+  --warning: #f59e0b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background:
+    radial-gradient(circle at top, rgba(82, 216, 255, 0.09), transparent 30%),
+    linear-gradient(180deg, #08111f 0%, #050b14 100%);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: transparent;
+  color: var(--text);
+  font-family: var(--font-body), sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(82, 216, 255, 0.28);
+  color: white;
+}
+
+.font-display {
+  font-family: var(--font-display), sans-serif;
+}
+
+.glass-panel {
+  background: linear-gradient(180deg, rgba(13, 24, 43, 0.82), rgba(9, 16, 29, 0.82));
+  backdrop-filter: blur(18px);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+}
